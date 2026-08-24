@@ -1,0 +1,64 @@
+:root {
+  --cream: #f4efe4;
+  --cream-deep: #ebe3d2;
+  --paper: #faf6ee;
+  --ink: #2a1c12;
+  --ink-soft: #5c4636;
+  --blue: #1b2a6b;
+  --blue-mid: #24398f;
+  --blue-deep: #121c4a;
+  --teak: #3a2418;
+  --teak-deep: #26150e;
+  --brass: #c4A574;
+  --brass-bright: #d8bc86;
+  --terracotta: #b85c38;
+  --rule: color-mix(in srgb, var(--teak) 18%, transparent);
+  --font-serif: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: Outfit, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --nav-h: 76px;
+  --shadow-paper: 0 18px 40px color-mix(in srgb, var(--teak) 12%, transparent);
+  --radius: 2px;
+}
+
+html {
+  scroll-padding-top: calc(var(--nav-h) + 12px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
