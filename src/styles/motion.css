@@ -37,13 +37,25 @@ html::-webkit-scrollbar-thumb {
 }
 
 .nav {
-  transition: height 0.45s cubic-bezier(0.22, 1, 0.36, 1), background 0.45s ease, box-shadow 0.45s ease;
+  transition:
+    height 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease,
+    opacity 0.55s ease,
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.55s ease;
 }
 
 .nav.is-scrolled {
   height: 62px;
   background: color-mix(in srgb, var(--cream) 96%, transparent);
   box-shadow: 0 10px 30px color-mix(in srgb, var(--teak) 10%, transparent);
+}
+
+.nav.is-scrolled.nav-tone-ink {
+  background: color-mix(in srgb, var(--blue-deep) 96%, transparent);
+  box-shadow: 0 10px 30px color-mix(in srgb, #000 28%, transparent);
 }
 
 .nav-links a {
@@ -73,13 +85,14 @@ html::-webkit-scrollbar-thumb {
   color: var(--blue);
 }
 
-.monogram {
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease;
+.brand-horiz,
+.brand-seal-mobile {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.brand:hover .monogram {
-  transform: rotate(-8deg);
-  border-color: var(--blue);
+.brand:hover .brand-horiz,
+.brand:hover .brand-seal-mobile {
+  transform: scale(1.03);
 }
 
 .btn {
@@ -97,6 +110,7 @@ html::-webkit-scrollbar-thumb {
   will-change: transform;
 }
 
+.hero-copy .hero-seal,
 .hero-copy .hero-est,
 .hero-copy h1,
 .hero-copy .hero-place,
@@ -105,8 +119,12 @@ html::-webkit-scrollbar-thumb {
   animation: riseIn 1.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+.hero-copy .hero-seal {
+  animation-delay: 0.05s;
+}
+
 .hero-copy .hero-est {
-  animation-delay: 0.15s;
+  animation-delay: 0.2s;
 }
 
 .hero-copy h1 {
@@ -119,10 +137,6 @@ html::-webkit-scrollbar-thumb {
 
 .hero-copy .hero-actions {
   animation-delay: 0.68s;
-}
-
-.hero-sign {
-  animation: floatSign 6s ease-in-out infinite, riseIn 1.2s 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .scroll-cue {
@@ -254,12 +268,22 @@ html::-webkit-scrollbar-thumb {
 }
 
 .marquee-track span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
   font-family: var(--font-serif);
   font-size: 1.35rem;
   color: var(--blue);
   letter-spacing: 0.08em;
   padding-right: 2.5rem;
   white-space: nowrap;
+}
+
+.marquee-mark {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  object-fit: contain;
 }
 
 .carousel-slide {
@@ -334,16 +358,6 @@ html::-webkit-scrollbar-thumb {
   }
   to {
     transform: scale(1.2) translate3d(0, -2.4%, 0);
-  }
-}
-
-@keyframes floatSign {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
   }
 }
 
@@ -460,6 +474,7 @@ html::-webkit-scrollbar-thumb {
   }
 
   .reveal,
+  .hero-copy .hero-seal,
   .hero-copy .hero-est,
   .hero-copy h1,
   .hero-copy .hero-place,
@@ -476,5 +491,11 @@ html::-webkit-scrollbar-thumb {
 
   .scroll-cue {
     display: none;
+  }
+
+  #intro .intro-seal {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
   }
 }

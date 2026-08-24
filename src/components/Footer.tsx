@@ -1,10 +1,14 @@
+import BrandMark from './BrandMark'
+
 export default function Footer() {
   return (
     <footer className="footer">
+      <div className="footer-brand">
+        <BrandMark variant="stackCream" className="footer-lockup" />
+      </div>
       <div className="wrap footer-grid">
         <div>
-          <p className="kicker">Est. 1924</p>
-          <h2>Hebbar’s Heritage Home</h2>
+          <p className="kicker">The house</p>
           <p>
             Fourth floor, Apeejay Chambers
             <br />

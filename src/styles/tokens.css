@@ -16,7 +16,7 @@
   --font-serif: "Cormorant Garamond", "Times New Roman", serif;
   --font-sans: Outfit, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
-  --nav-h: 76px;
+  --nav-h: 84px;
   --shadow-paper: 0 18px 40px color-mix(in srgb, var(--teak) 12%, transparent);
   --radius: 2px;
 }

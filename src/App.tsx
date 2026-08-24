@@ -6,6 +6,7 @@ import FindUs from './components/FindUs'
 import FoodEvents from './components/FoodEvents'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
+import Intro from './components/Intro'
 import HouseRules from './components/HouseRules'
 import Marquee from './components/Marquee'
 import Nav from './components/Nav'
@@ -31,6 +32,7 @@ export default function App() {
 
   return (
     <>
+      <Intro />
       <SmoothScroll />
       <ScrollProgress />
       <Nav open={menuOpen} onToggle={() => setMenuOpen((v) => !v)} onClose={() => setMenuOpen(false)} />

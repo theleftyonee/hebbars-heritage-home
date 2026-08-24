@@ -1,3 +1,4 @@
+import BrandMark from './BrandMark'
 import { useEffect } from 'react'
 
 export type Confirmation = {
@@ -29,10 +30,13 @@ export default function ConfirmModal({ confirmation, onClose }: Props) {
         aria-labelledby="confirm-title"
         onClick={(e) => e.stopPropagation()}
       >
+        <BrandMark variant="seal" className="confirm-seal" decorative />
         <p className="kicker">House Desk · request received</p>
         <h2 id="confirm-title">{confirmation.title}</h2>
-        <p className="key-tag" aria-label="Booking reference">
-          {confirmation.reference}
+        <p className="key-tag" aria-label={`Booking reference ${confirmation.reference}`}>
+          {confirmation.reference.split('-').map((part) => (
+            <span key={part}>{part}</span>
+          ))}
         </p>
         <ul className="confirm-lines">
           {confirmation.lines.map((line) => (

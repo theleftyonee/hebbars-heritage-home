@@ -1,3 +1,4 @@
+import BrandMark from './BrandMark'
 import { useEffect, useRef } from 'react'
 
 export default function Hero() {
@@ -24,6 +25,7 @@ export default function Hero() {
       </div>
       <div className="hero-veil" />
       <div className="hero-copy">
+        <BrandMark variant="seal" className="hero-seal" decorative />
         <p className="hero-est">Est. 1924 · Fourth floor</p>
         <h1>
           Hebbar’s
@@ -39,9 +41,6 @@ export default function Hero() {
             Walk the Fort
           </a>
         </div>
-      </div>
-      <div className="hero-sign" aria-hidden="true">
-        H 04
       </div>
       <a className="scroll-cue" href="#house">
         Enter
