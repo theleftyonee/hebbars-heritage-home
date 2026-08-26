@@ -48,7 +48,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .nav.is-scrolled {
-  height: 62px;
+  height: 88px;
   background: color-mix(in srgb, var(--cream) 96%, transparent);
   box-shadow: 0 10px 30px color-mix(in srgb, var(--teak) 10%, transparent);
 }
@@ -87,7 +87,17 @@ html::-webkit-scrollbar-thumb {
 
 .brand-horiz,
 .brand-seal-mobile {
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    height 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav.is-scrolled .brand-horiz {
+  height: 56px;
+}
+
+.nav.is-scrolled .brand-seal-mobile {
+  height: 48px;
 }
 
 .brand:hover .brand-horiz,

@@ -9,7 +9,7 @@ export default function SmoothScroll() {
       duration: 1.2,
       lerp: 0.07,
       smoothWheel: true,
-      anchors: { offset: -84, duration: 1.3 },
+      anchors: { offset: -104, duration: 1.3 },
       respectReducedMotion: true,
     })
 

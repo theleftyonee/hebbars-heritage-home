@@ -13,7 +13,7 @@ const links = [
 function toneUnderNav(): 'cream' | 'ink' {
   if (document.body.classList.contains('modal-open')) return 'cream'
   const nav = document.querySelector('.nav')
-  const bottom = nav?.getBoundingClientRect().bottom ?? 84
+  const bottom = nav?.getBoundingClientRect().bottom ?? 104
   const x = Math.round(window.innerWidth / 2)
   let sawLight = false
   for (const offset of [36, 110, 200]) {
