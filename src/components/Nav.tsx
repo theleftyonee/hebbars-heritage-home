@@ -1,19 +1,13 @@
 import { useEffect, useState } from 'react'
 import BrandMark from './BrandMark'
 
-type Props = {
-  open: boolean
-  onToggle: () => void
-  onClose: () => void
-}
-
 const links = [
   { href: '#house', label: 'The House' },
   { href: '#stay', label: 'Stay' },
   { href: '#table', label: 'Table' },
   { href: '#fort', label: 'Fort' },
   { href: '#shoots', label: 'Shoots' },
-  { href: '#house-rules', label: 'House' },
+  { href: '#house-rules', label: 'Rules' },
 ]
 
 function toneUnderNav(): 'cream' | 'ink' {
@@ -34,7 +28,7 @@ function toneUnderNav(): 'cream' | 'ink' {
   return sawLight ? 'ink' : 'cream'
 }
 
-export default function Nav({ open, onToggle, onClose }: Props) {
+export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [pastHero, setPastHero] = useState(false)
   const [tone, setTone] = useState<'cream' | 'ink'>('cream')
@@ -88,7 +82,7 @@ export default function Nav({ open, onToggle, onClose }: Props) {
   }, [])
 
   const ink = tone === 'ink'
-  const visible = pastHero || open
+  const visible = pastHero
 
   return (
     <header
@@ -99,7 +93,7 @@ export default function Nav({ open, onToggle, onClose }: Props) {
       {...(!visible ? { inert: true } : {})}
     >
       <div className="nav-inner">
-        <a className="brand" href="#top" onClick={onClose}>
+        <a className="brand" href="#top">
           <BrandMark variant={ink ? 'horizCream' : 'horiz'} className="brand-horiz" />
           <BrandMark variant={ink ? 'sealCream' : 'seal'} className="brand-seal-mobile" />
         </a>
@@ -114,26 +108,10 @@ export default function Nav({ open, onToggle, onClose }: Props) {
             ))}
           </ul>
         </nav>
-        <a className="btn btn-brass" href="#book">
+        <a className="btn btn-brass nav-book" href="#book">
           Book a stay
         </a>
-        <button className="nav-toggle" type="button" aria-label="Open menu" onClick={onToggle}>
-          <span />
-        </button>
       </div>
-      {open ? (
-        <div className="drawer" role="dialog" aria-label="Menu">
-          <BrandMark variant="seal" className="drawer-seal" decorative />
-          {links.map((link) => (
-            <a key={link.href} href={link.href} onClick={onClose}>
-              {link.label}
-            </a>
-          ))}
-          <a className="btn btn-blue" href="#book" onClick={onClose}>
-            Book a stay
-          </a>
-        </div>
-      ) : null}
     </header>
   )
 }

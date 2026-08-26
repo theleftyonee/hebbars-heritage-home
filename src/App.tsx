@@ -21,7 +21,6 @@ import TileRule from './components/TileRule'
 import type { RoomId } from './data/rooms'
 
 export default function App() {
-  const [menuOpen, setMenuOpen] = useState(false)
   const [roomId, setRoomId] = useState<RoomId>('heritage-3')
   const [confirmation, setConfirmation] = useState<Confirmation | null>(null)
 
@@ -35,7 +34,7 @@ export default function App() {
       <Intro />
       <SmoothScroll />
       <ScrollProgress />
-      <Nav open={menuOpen} onToggle={() => setMenuOpen((v) => !v)} onClose={() => setMenuOpen(false)} />
+      <Nav />
       <Hero />
       <TileRule />
       <TheHouse />

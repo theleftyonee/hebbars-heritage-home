@@ -101,9 +101,18 @@ export default function Shoots({ onConfirm }: Props) {
           <p>Maximum standard booking 8 hours · half-day up to 4 hours · overtime charged hourly · night shoots only with special approval.</p>
           <p>Arrive no more than 30 minutes before access. Setup, hair and makeup, shooting and pack-up must finish inside the booked period.</p>
           <div className="slot-list">
-            <span className="chip">Morning light 8:00–12:00</span>
-            <span className="chip">Afternoon interiors 1:00–5:00</span>
-            <span className="chip">Golden-hour terrace 4:30–7:00</span>
+            <div className="slot">
+              <span className="slot-name">Morning light</span>
+              <span className="slot-time">8:00 AM – 12:00 PM</span>
+            </div>
+            <div className="slot">
+              <span className="slot-name">Afternoon interiors</span>
+              <span className="slot-time">1:00 PM – 5:00 PM</span>
+            </div>
+            <div className="slot">
+              <span className="slot-name">Golden-hour terrace</span>
+              <span className="slot-time">4:30 PM – 7:00 PM</span>
+            </div>
           </div>
           <figure className="frame" style={{ marginTop: 24 }}>
             <img
