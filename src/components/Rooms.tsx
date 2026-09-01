@@ -13,6 +13,7 @@ export default function Rooms({ selected, onSelect }: Props) {
       <div className="wrap">
         <div className="stay-intro">
           <Reveal variant="left">
+            <div className="frame-stack">
             <figure className="frame">
               <img
                 src="/images/dorm.jpg"
@@ -20,6 +21,14 @@ export default function Rooms({ selected, onSelect }: Props) {
               />
               <figcaption>Bunk rooms · reading lights · lockers</figcaption>
             </figure>
+            <figure className="frame">
+              <img
+                src="/images/vanity.jpg"
+                alt="Tiled corridor leading to a shared washbasin, teak doors and a hanging lamp"
+              />
+              <figcaption>Shared washroom · tiled corridor</figcaption>
+            </figure>
+            </div>
           </Reveal>
           <Reveal variant="right" delay={120}>
             <p className="kicker">Rooms &amp; rate card</p>

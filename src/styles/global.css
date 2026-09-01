@@ -526,6 +526,14 @@ body::after {
   height: 420px;
 }
 
+.stay-intro .frame-stack .frame img {
+  height: 240px;
+}
+
+.stay-intro .frame-stack .frame:first-child img {
+  height: 320px;
+}
+
 .room-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

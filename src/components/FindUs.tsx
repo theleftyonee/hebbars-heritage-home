@@ -33,8 +33,8 @@ export default function FindUs() {
           <div className="visit-media">
             <figure className="frame">
               <img
-                src="/images/rose-window.jpg"
-                alt="Bombay-blue Hebbar’s sign pointing to the fourth floor beside the stained-glass landing"
+                src="/images/signage.jpg"
+                alt="Hebbar’s Heritage Home notice board and tiled corridor on the fourth floor"
               />
               <figcaption>Follow the blue board · fourth floor</figcaption>
             </figure>

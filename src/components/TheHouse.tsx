@@ -8,14 +8,21 @@ export default function TheHouse() {
           <div className="frame-stack">
             <figure className="frame">
               <img
-                src="/images/tiffin.jpg"
-                alt="Long teak Tiffin Table, brass jars, amber pendants and the kitchen screens of Hebbar’s"
+                src="/images/desk.jpg"
+                alt="House Desk with the Hebbar legacy wall, brass picture lights and the stair to the rooms"
               />
-              <figcaption>Tiffin Table · house kitchen</figcaption>
+              <figcaption>House Desk · Hebbar legacy</figcaption>
             </figure>
             <figure className="frame">
               <img src="/images/house.jpg" alt="Low teak seating, brass tiffins and Bombay-blue tiles in the common room" />
               <figcaption>Lounge · common room</figcaption>
+            </figure>
+            <figure className="frame">
+              <img
+                src="/images/nook.jpg"
+                alt="Floor seating, brass lanterns and a gallery wall in the house nook"
+              />
+              <figcaption>Nook · floor seating</figcaption>
             </figure>
           </div>
         </Reveal>

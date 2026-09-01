@@ -121,6 +121,13 @@ export default function Shoots({ onConfirm }: Props) {
             />
             <figcaption>Rose window · morning light</figcaption>
           </figure>
+          <figure className="frame" style={{ marginTop: 16 }}>
+            <img
+              src="/images/interiors.jpg"
+              alt="Empty tiled room with teak panelling, Bombay-blue stars and afternoon window light"
+            />
+            <figcaption>Tiled interiors · afternoon light</figcaption>
+          </figure>
           <div className="split-lists">
             <div>
               <p className="kicker">Always restricted</p>
